@@ -35,10 +35,12 @@ function requestHelper(url, input, method) {
             }
             else {
                 if (response) {
+                    console.log('url: ', url)
                     console.log('alarm: Error invoking whisk action:', response.statusCode, body);
                     reject(body);
                 }
                 else {
+                    console.log('url: ', url)
                     console.log('alarm: Error invoking whisk action:', error);
                     reject(error);
                 }
